@@ -116,11 +116,28 @@
 
 //Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
-int[] numeri = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 56, 1,  95, 12, 33};
-int sum = 0;
+//int[] numeri = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 56, 1,  95, 12, 33};
+//int sum = 0;
 
-for (int i = 0; i < numeri.Length; i++)
-    if (i % 2 == 0)
-        sum += numeri[i];
+//for (int i = 0; i < numeri.Length; i++)
+//    if (i % 2 == 0)
+//        sum += numeri[i];
 
-Console.WriteLine(sum);
+//Console.WriteLine(sum);
+
+
+
+
+//Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50. Random
+
+int[] numeri = new int[1000];
+int sum = 0, count=0;
+
+while (sum < 50)
+{
+    numeri[count] = Convert.ToInt32(Console.ReadLine());
+    sum += numeri[count];
+    count++;
+}
+
+Console.WriteLine("Grazie!");
