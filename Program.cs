@@ -53,12 +53,27 @@
 
 //Calcola la somma e la media dei numeri da 2 a 10.
 
-int sum = 0, count = 0;
+//int sum = 0, count = 0;
 
-for (int i = 2; i <= 10; i++)
-{
-    sum += i;
-    count++;
-}
+//for (int i = 2; i <= 10; i++)
+//{
+//    sum += i;
+//    count++;
+//}
 
-Console.WriteLine($"La somma è {sum}, la media è {sum / count}");
+//Console.WriteLine($"La somma è {sum}, la media è {sum / count}");
+
+
+
+//Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+
+int n;
+
+Console.WriteLine("inserisci un numero");
+
+n = Convert.ToInt32(Console.ReadLine());
+
+if (n % 2 == 0)
+    Console.WriteLine($"Hai inserito il numero {n}");
+else
+    Console.WriteLine($"Un numero pari vicino a quello inserito è {n + 1}");
