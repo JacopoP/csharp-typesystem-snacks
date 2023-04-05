@@ -147,22 +147,47 @@
 
 //Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
 
-Random rnd = new Random();
+//Random rnd = new Random();
 
-Console.WriteLine("Inserisci un numero");
+//Console.WriteLine("Inserisci un numero");
 
-int N = Convert.ToInt32(Console.ReadLine());
+//int N = Convert.ToInt32(Console.ReadLine());
 
-int[][] arrays = new int[N][];
+//int[][] arrays = new int[N][];
 
-for (int i = 0; i < N; i++)
+//for (int i = 0; i < N; i++)
+//{
+//    arrays[i] = new int[10];
+//    for (int j = 0; j < 10; j++)
+//        arrays[i][j] = rnd.Next(1, 100);
+
+//    Console.WriteLine($"Array {i}:");
+//    foreach (int x in arrays[i])
+//        Console.Write(x + " ");
+//    Console.WriteLine("");
+//}
+
+
+
+
+//Dare la possibilità di inserire due parole. Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+
+Console.WriteLine("Inserisci una parola");
+
+string word1 = Console.ReadLine();
+
+Console.WriteLine("Inseriscine un'altra");
+
+string word2 = Console.ReadLine();
+
+if (sameLength(word1, word2))
+    Console.WriteLine(word1 + " " + word2);
+else if (word1.Length > word2.Length) 
+    Console.WriteLine(word1);
+else
+    Console.WriteLine(word2);
+
+static bool sameLength(string word1, string word2)
 {
-    arrays[i] = new int[10];
-    for (int j = 0; j < 10; j++)
-        arrays[i][j] = rnd.Next(1, 100);
-
-    Console.WriteLine($"Array {i}:");
-    foreach (int x in arrays[i])
-        Console.Write(x + " ");
-    Console.WriteLine("");
+    return word1.Length == word2.Length;
 }
