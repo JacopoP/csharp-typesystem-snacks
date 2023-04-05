@@ -37,13 +37,28 @@
 
 //Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
 
-int sum = 0;
+//int sum = 0;
 
-Console.WriteLine("Inserisci 10 numeri");
+//Console.WriteLine("Inserisci 10 numeri");
 
-for (int i = 0; i<10; i++)
+//for (int i = 0; i<10; i++)
+//{
+//    sum += int.Parse(Console.ReadLine());
+//}
+
+//Console.WriteLine($"La somma dei numeri inseriti è {sum}");
+
+
+
+
+//Calcola la somma e la media dei numeri da 2 a 10.
+
+int sum = 0, count = 0;
+
+for (int i = 2; i <= 10; i++)
 {
-    sum += int.Parse(Console.ReadLine());
+    sum += i;
+    count++;
 }
 
-Console.WriteLine($"La somma dei numeri inseriti è {sum}");
+Console.WriteLine($"La somma è {sum}, la media è {sum / count}");
