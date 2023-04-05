@@ -102,13 +102,25 @@
 
 //Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
 
-int[] numbers = new int[6];
+//int[] numbers = new int[6];
 
-Console.WriteLine("Inserisci 6 numeri");
-for (int i = 0; i < 6; i++)
-{
-    int n = Convert.ToInt32(Console.ReadLine());
-    if (n %2 != 0)
-        numbers[i] = n;
-}
-    
+//Console.WriteLine("Inserisci 6 numeri");
+//for (int i = 0; i < 6; i++)
+//{
+//    int n = Convert.ToInt32(Console.ReadLine());
+//    if (n %2 != 0)
+//        numbers[i] = n;
+//}
+
+
+
+//Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+
+int[] numeri = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 56, 1,  95, 12, 33};
+int sum = 0;
+
+for (int i = 0; i < numeri.Length; i++)
+    if (i % 2 == 0)
+        sum += numeri[i];
+
+Console.WriteLine(sum);
