@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
 
 
 
@@ -23,13 +22,28 @@ Console.WriteLine("Hello, World!");
 
 //L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
 
-Console.WriteLine("Scrivi due parole: ");
+//Console.WriteLine("Scrivi due parole: ");
 
-string? str1 = Console.ReadLine(), str2 = Console.ReadLine();
+//string? str1 = Console.ReadLine(), str2 = Console.ReadLine();
 
-if (str1.Length > str2.Length)
-    Console.WriteLine($"{str2} {str1}");
-else if (str2.Length > str1.Length)
-    Console.WriteLine($"{str1} {str2}");
-else
-    Console.WriteLine("Hai inserito 2 parole di egual lunghezza");
+//if (str1.Length > str2.Length)
+//    Console.WriteLine($"{str2} {str1}");
+//else if (str2.Length > str1.Length)
+//    Console.WriteLine($"{str1} {str2}");
+//else
+//    Console.WriteLine("Hai inserito 2 parole di egual lunghezza");
+
+
+
+//Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
+
+int sum = 0;
+
+Console.WriteLine("Inserisci 10 numeri");
+
+for (int i = 0; i<10; i++)
+{
+    sum += int.Parse(Console.ReadLine());
+}
+
+Console.WriteLine($"La somma dei numeri inseriti è {sum}");
