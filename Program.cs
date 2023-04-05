@@ -67,13 +67,33 @@
 
 //Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
 
-int n;
+//int n;
 
-Console.WriteLine("inserisci un numero");
+//Console.WriteLine("inserisci un numero");
 
-n = Convert.ToInt32(Console.ReadLine());
+//n = Convert.ToInt32(Console.ReadLine());
 
-if (n % 2 == 0)
-    Console.WriteLine($"Hai inserito il numero {n}");
+//if (n % 2 == 0)
+//    Console.WriteLine($"Hai inserito il numero {n}");
+//else
+//    Console.WriteLine($"Un numero pari vicino a quello inserito è {n + 1}");
+
+
+
+//In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+
+string[] list = { "Marco", "Giovanni", "Filippo" };
+bool invited = false;
+
+Console.WriteLine("Come ti chiami?");
+
+string name = Console.ReadLine();
+
+foreach (string person in list)
+    if(!invited)
+        invited = name == person;
+
+if (invited)
+    Console.WriteLine("Benvenuto"!);
 else
-    Console.WriteLine($"Un numero pari vicino a quello inserito è {n + 1}");
+    Console.WriteLine("Spicante, ma non sei invitato");
